@@ -11,7 +11,7 @@ public class Area_Of_Circle {
         double pi = 3.141592;
 
         double area = pi * r * r;
-        System.out.println("Area of Circld = " + area);
+        System.out.println("Area of Circle = " + area);
 
     }
 }
