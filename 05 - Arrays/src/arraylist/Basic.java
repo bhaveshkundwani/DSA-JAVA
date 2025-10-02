@@ -3,7 +3,7 @@ package arraylist;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class basic {
+public class Basic {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         // Syntax
