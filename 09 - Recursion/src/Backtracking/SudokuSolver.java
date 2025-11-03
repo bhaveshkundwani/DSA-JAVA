@@ -69,7 +69,7 @@ public class SudokuSolver {
         // check the row
         for (int i = 0; i < board.length; i++) {
             // check if the number is in the row or not
-            if (board[row][col] == num) {
+            if (board[row][i] == num) {
                 return false;
             }
         }
