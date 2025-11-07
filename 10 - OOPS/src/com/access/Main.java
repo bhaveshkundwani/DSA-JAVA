@@ -10,7 +10,8 @@ public class Main {
 //        ArrayList<Integer> list = new ArrayList<>(23);
 //        list.DEFAULT_CAPACITY;
 
+        obj.setNum(374);
         obj.getNum();
-        int n = obj.num;
+//        int n = obj.num;
     }
 }
