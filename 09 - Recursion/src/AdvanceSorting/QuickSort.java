@@ -21,7 +21,6 @@ public class QuickSort {
     // the QuickSort function implementation
     public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
-
             // pi is the partition return index of pivot
             int pi = partition(arr, low, high);
 
