@@ -1,11 +1,12 @@
 package com;
 
-public class CustomLinkedList {
+public class SinglyLinkedList {
 
     private Node head;
     private Node tail;
     private int size;
-    public CustomLinkedList() {
+
+    public SinglyLinkedList() {
         this.size = 0;
     }
 
