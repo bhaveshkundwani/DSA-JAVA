@@ -28,13 +28,13 @@ public class Main {
 //        System.out.println(list.find(90));
 //        list.display();
 
-        DoublyLinkedList list = new DoublyLinkedList();
-        list.insertFirst(28);
-        list.insertFirst(84);
-        list.insertFirst(67);
-        list.insertFirst(82);
+//        DoublyLinkedList list = new DoublyLinkedList();
+//        list.insertFirst(28);
+//        list.insertFirst(84);
+//        list.insertFirst(67);
+//        list.insertFirst(82);
 //        list.insertFirst(54);
-        list.display();
+//        list.display();
 //        list.displayReverse();
 
 //        list.insertLast(78);
@@ -50,7 +50,17 @@ public class Main {
 //        System.out.println(list.deleteLast());
 //        list.display();
 
-        System.out.println(list.delete(2));
+//        System.out.println(list.delete(2));
+//        list.display();
+
+        CircularLinkedList list = new CircularLinkedList();
+        list.insert(10);
+//        list.insert(20);
+//        list.insert(30);
+//        list.insert(40);
+        list.display();
+
+        list.delete(10);
         list.display();
     }
 }
