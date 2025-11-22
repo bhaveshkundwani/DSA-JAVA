@@ -50,6 +50,22 @@ public class SinglyLinkedList {
         size++;
     }
 
+    // insert using recursion
+    public void insertRec(int val, int index) {
+        head = insertRec(val, index, head);
+    }
+
+    private Node insertRec(int val, int index, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(val, index-1, node.next);
+        return node;
+    }
+
     public int delete(int index) {
         if (index == 0) {
             return deleteFirst();
@@ -128,4 +144,79 @@ public class SinglyLinkedList {
         }
     }
 
+    // questions
+
+    // remove duplicates
+    public void duplicates() {
+        Node temp = head;
+
+        while (temp.next != null) {
+            if (temp.value == temp.next.value) {
+                temp.next = temp.next.next;
+                size--;
+            } else {
+                temp = temp.next;
+            }
+        }
+        tail = temp;
+        tail.next = null;
+    }
+
+    // merge sorted lists
+    public static SinglyLinkedList merge(SinglyLinkedList first, SinglyLinkedList second) {
+        Node firstHead = first.head;
+        Node secondHead = second.head;
+
+        SinglyLinkedList ans = new SinglyLinkedList();
+
+        while (firstHead.next != null && secondHead.next != null) {
+            if (firstHead.value < secondHead.value) {
+                ans.insertLast(firstHead.value);
+                firstHead = firstHead.next;
+            } else {
+                ans.insertLast(secondHead.value);
+                secondHead = secondHead.next;
+            }
+        }
+
+        while (firstHead != null) {
+            ans.insertLast(firstHead.value);
+            firstHead = firstHead.next;
+        }
+
+        while (secondHead != null) {
+            ans.insertLast(secondHead.value);
+            secondHead = secondHead.next;
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+//        SinglyLinkedList list = new SinglyLinkedList();
+//        list.insertLast(1);
+//        list.insertLast(1);
+//        list.insertLast(2);
+//        list.insertLast(3);
+//        list.insertLast(3);
+//        list.insertLast(3);
+//        list.display();
+//        list.duplicates();
+//        list.display();
+
+        SinglyLinkedList first = new SinglyLinkedList();
+        SinglyLinkedList second = new SinglyLinkedList();
+
+        first.insertLast(1);
+        first.insertLast(3);
+        first.insertLast(5);
+
+        second.insertLast(1);
+        second.insertLast(2);
+        second.insertLast(9);
+        second.insertLast(14);
+
+        SinglyLinkedList ans = SinglyLinkedList.merge(first, second);
+        ans.display();
+    }
 }

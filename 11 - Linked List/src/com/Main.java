@@ -2,12 +2,12 @@ package com;
 
 public class Main {
     public static void main(String[] args) {
-//        SinglyLinkedList list = new SinglyLinkedList();
-//
-//        list.insertFirst(29);
-//        list.insertFirst(47);
-//        list.insertFirst(93);
-//        list.display();
+        SinglyLinkedList list = new SinglyLinkedList();
+
+        list.insertFirst(29);
+        list.insertFirst(47);
+        list.insertFirst(93);
+        list.display();
 //
 //        list.insertLast(19);
 //        list.insertLast(57);
@@ -27,6 +27,10 @@ public class Main {
 //
 //        System.out.println(list.find(90));
 //        list.display();
+
+        list.insertRec(88, 2);
+        list.display();
+
 
 //        DoublyLinkedList list = new DoublyLinkedList();
 //        list.insertFirst(28);
@@ -53,14 +57,14 @@ public class Main {
 //        System.out.println(list.delete(2));
 //        list.display();
 
-        CircularLinkedList list = new CircularLinkedList();
-        list.insert(10);
+//        CircularLinkedList list = new CircularLinkedList();
+//        list.insert(10);
 //        list.insert(20);
 //        list.insert(30);
 //        list.insert(40);
-        list.display();
-
-        list.delete(10);
-        list.display();
+//        list.display();
+//
+//        list.delete(10);
+//        list.display();
     }
 }
